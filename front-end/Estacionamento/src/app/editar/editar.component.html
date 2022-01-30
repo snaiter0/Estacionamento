@@ -1,0 +1,55 @@
+<div class="container espacamento">
+    <div class="col-md-12 align-content-center">
+
+        <h2 class="text-center">Dados de contato</h2>
+
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputName" class="form-label">Nome</label>
+                <input [(ngModel)]="ClientByID.name"  [ngModelOptions]="{standalone: true}" class="form-control" type="text" placeholder="{{ClientByID.name}}">
+            </div>
+            <div class="col-md-6">
+                <label for="inputFone" class="form-label">Fone</label>
+                <input [(ngModel)]="ClientByID.fone"  [ngModelOptions]="{standalone: true}" class="form-control" type="text" placeholder="{{ClientByID.fone}}">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-danger pd-5 tamanho" (click)='EditarClient()'>Editar Cliente</button>
+            </div>
+            
+            <h2 class="text-center">Carro</h2>
+
+            <div class="col-6">
+                <label for="inputModelo" class="form-label">Modelo</label>
+                <input [(ngModel)]="VehicleByID.modelo"  [ngModelOptions]="{standalone: true}" class="form-control" type="text" placeholder="{{VehicleByID.modelo}}">
+            </div>
+            <div class="col-6">
+                <label for="inputCor" class="form-label">Cor</label>
+                <input [(ngModel)]="VehicleByID.cor"  [ngModelOptions]="{standalone: true}" class="form-control" type="text" placeholder="{{VehicleByID.cor}}">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPlaca" class="form-label">Placa</label>
+                <input [(ngModel)]="VehicleByID.placa"  [ngModelOptions]="{standalone: true}" type="text" class="form-control" type="text">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-danger pd-5 tamanho" (click)='EditarVehicle()'>Editar Carro</button>
+            </div>
+            
+            <h2 class="text-center">Rotativo</h2>
+
+            <div class="col-md-3">
+                <label for="inputDate" class="form-label">Entrada</label>
+                <input [(ngModel)]="RotativeByID.entrada" [ngModelOptions]="{standalone: true}" type="datetime"
+                    class="form-control" placeholder="{{RotativeByID.entrada}}">
+            </div>
+            <div class="col-md-3">
+                <label for="inputDate" class="form-label">Saída</label>
+                <input [(ngModel)]="RotativeByID.saida" [ngModelOptions]="{standalone: true}" type="datetime"
+                    class="form-control" placeholder="{{RotativeByID.saida}}">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-danger pd-5" (click)='EditarRotative()'>Editar rotativo</button>
+                <button routerLink="/lista" class="btn btn-primary">Listar todos</button>
+            </div>
+        </form>
+    </div>
+</div>

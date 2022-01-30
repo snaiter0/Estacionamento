@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-md-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>nome</th>
+                    <th>telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let client of listarClientes' class="altura align-content-center">
+                    <th scope="row">{{client.idClient}}</th>
+                    <td>{{client.name}}</td>
+                    <td>{{client.fone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <table class="table">
+            <thead>
+                <tr >
+                    <th>modelo</th>
+                    <th>placa</th>
+                    <th>cor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let vehicles of listarVehicles' class="altura">
+                    <td>{{vehicles.modelo}}</td>
+                    <td>{{vehicles.placa}}</td>
+                    <td>{{vehicles.cor}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Entrada</th>
+                    <th>Saida</th>
+                    <th>modificar</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let rotative of listarRotatives' class="altura">
+                    <td >{{rotative.entrada}}</td>
+                    <td>{{rotative.saida}}</td>
+                    <td class="static"> <button class="btn btn-secondary" [routerLink]= "['/saida', rotative.id]">Encerrar</button> <button [routerLink]= "['/editar', rotative.id]" class="btn btn-primary">Editar</button></td>
+                    
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center">
+            <button routerLink="/estacionamento" class="btn btn-danger " >Nova entrada</button>
+           
+</div>
+            
+
+
+
+    

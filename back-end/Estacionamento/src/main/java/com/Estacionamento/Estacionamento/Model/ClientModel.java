@@ -4,14 +4,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
-@Entity
+@Entity		//Modelo da ficha do cliente.
 public class ClientModel {
 	
-	@GeneratedValue(strategy = GenerationType.IDENTITY) @Id Long idClient;
+	
+	// Atributos do cliente
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY) @Id //Estabelece como Primary Key e AutoIncrement
+	Long idClient;
+	@NotNull	//Estabelece que este campo não pode ser Nulo.
 	String name;
+	@NotNull	//Estabelece que este campo não pode ser Nulo.
 	Long fone;
 
+
+	
+	// Get and Setters dos atributos do cliente.
 	
 	public Long getIdClient() {
 		return idClient;

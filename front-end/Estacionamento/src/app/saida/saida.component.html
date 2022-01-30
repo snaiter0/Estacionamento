@@ -1,0 +1,46 @@
+<div class="container espacamento">
+    <div class="col-md-12 align-content-center">
+        <h2 class="text-center">Consultar pelo ID</h2>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputName" class="form-label">Nome</label>
+                <input class="form-control" type="text" placeholder="{{ClientByID.name}}" disabled="">
+            </div>
+            <div class="col-md-6">
+                <label for="inputFone" class="form-label">Fone</label>
+                <input class="form-control" type="text" placeholder="{{ClientByID.fone}}" disabled="">
+            </div>
+            <div class="col-6">
+                <label for="inputModelo" class="form-label">Modelo</label>
+                <input class="form-control" type="text" placeholder="{{VehicleByID.modelo}}" disabled="">
+            </div>
+            <div class="col-6">
+                <label for="inputCor" class="form-label">Cor</label>
+                <input class="form-control" type="text" placeholder="{{VehicleByID.cor}}" disabled="">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPlaca" class="form-label">Placa</label>
+                <input type="text" class="form-control" type="text" placeholder="{{VehicleByID.placa}}" disabled="">
+            </div>
+            <div class="col-md-4">
+                <label for="inputIDVehicle" class="form-label">Ident. Veiculo</label>
+                <input [(ngModel)]="RotativeByID.id" [ngModelOptions]="{standalone: true}" class="form-control"
+                    type="number" id="inputIDVehicle" disabled="" placeholder="{{this.id}}">
+            </div>
+            <div class="col-md-3">
+                <label for="inputDate" class="form-label">Entrada</label>
+                <input [(ngModel)]="RotativeByID.entrada" [ngModelOptions]="{standalone: true}" type="datetime-local"
+                    class="form-control" type="text" placeholder="{{RotativeByID.entrada}}" disabled="">
+            </div>
+            <div class="col-md-3">
+                <label for="inputDate" class="form-label">Saida</label>
+                <input [(ngModel)]="RotativeByID.saida" [ngModelOptions]="{standalone: true}" type="datetime-local"
+                    class="form-control">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-danger pd-5" (click)='encerrar()'>Encerrar</button>
+                <button routerLink="/lista" class="btn btn-primary"> Listar todos</button>
+            </div>
+        </form>
+    </div>
+</div>

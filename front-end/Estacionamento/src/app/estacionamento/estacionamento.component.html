@@ -1,0 +1,41 @@
+<div class="container espacamento" >
+    <div class="col-md-12 align-content-center">
+        <h2 class="text-center">Cadastrar</h2>
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputName" class="form-label">Nome</label>
+              <input [(ngModel)]='Cliente.name' [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="inputName" placeholder="Nome do cliente :D">
+            </div>
+            <div class="col-md-6">
+              <label for="inputFone" class="form-label">Fone</label>
+              <input [(ngModel)]='Cliente.fone' [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="inputFone" placeholder="Apenas numeros ex: 11953447015">
+            </div>
+            <div class="col-6">
+              <label for="inputModelo" class="form-label">Modelo</label>
+              <input [(ngModel)]='Veiculo.modelo' [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="inputModelo" placeholder="Modelo do carro">
+            </div>
+            <div class="col-6">
+              <label for="inputCor" class="form-label">Cor</label>
+              <input [(ngModel)]='Veiculo.cor' [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="inputCor" placeholder="Cor do carro">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPlaca" class="form-label">Placa</label>
+              <input [(ngModel)]='Veiculo.placa' [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="inputPlaca">
+            </div>
+            <div class="col-md-3">
+                <label for="inputDate" class="form-label">Entrada</label>
+                <input [(ngModel)]='Rotativo.entrada' [ngModelOptions]="{standalone: true}" type="datetime-local" format="datetime" class="form-control" id="inputDate">
+              </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-danger pd-5" (click)='RegistraEntrada()'>Validar entrada</button>
+              <button routerLink="/lista" class="btn btn-primary"> Listar todos</button>
+            </div>
+          </form>
+    </div>
+</div>
+
+
+
+
+
+

@@ -15,6 +15,9 @@ import springfox.documentation.service.Response;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
+//Esta classe é exclusiva para configurar o Swagger, sendo a ferramenta na qual faço os testes de requisições
+// HTTP, consulto os modelos de cada Componente e suas condições.
+
 @Configuration
 public class SwaggerConfig {
 	
@@ -52,6 +55,8 @@ private static List<Response> responseMessageForGET() {
 return new ArrayList<Response>() {
 private static final long serialVersionUID = 1L;
 {
+	
+	// Aqui são respostas setadas manualmente, porém existe a opção default destas mensagens.
 add(new ResponseBuilder().code("200")
 .description("Sucesso!").build());
 add(new ResponseBuilder().code("201")

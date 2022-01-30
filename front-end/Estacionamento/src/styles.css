@@ -1,0 +1,18 @@
+.espacamento{
+    margin-top: 15px;   
+} 
+
+.centralizacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pd-5{
+    margin-right: 5px;
+}
+
+.altura{
+height: 60px;
+}
+
