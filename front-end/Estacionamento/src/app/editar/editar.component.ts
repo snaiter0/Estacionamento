@@ -76,4 +76,17 @@ EditarRotative(){
   })
 }
 
+excluirRegistro(){
+  this.Service.deleteClient(this.id).subscribe((resp:ClientModel)=>{
+    this.ClientByID=resp;
+    
+  })
+  this.Service.deleteVehicle(this.id).subscribe((resp:VehicleModel)=>{
+    this.VehicleByID=resp;
+})
+this.Service.deleteRotative(this.id).subscribe((resp:Rotative)=>{
+  this.RotativeByID=resp;
+})
+alert("Registros excluídos.");
+}
 }

@@ -13,7 +13,7 @@
                 <input [(ngModel)]="ClientByID.fone"  [ngModelOptions]="{standalone: true}" class="form-control" type="text" placeholder="{{ClientByID.fone}}">
             </div>
             <div>
-                <button type="submit" class="btn btn-danger pd-5 tamanho" (click)='EditarClient()'>Editar Cliente</button>
+                <button type="submit" class="btn btn-warning pd-5 tamanho" (click)='EditarClient()'>Editar Cliente</button>
             </div>
             
             <h2 class="text-center">Carro</h2>
@@ -31,7 +31,7 @@
                 <input [(ngModel)]="VehicleByID.placa"  [ngModelOptions]="{standalone: true}" type="text" class="form-control" type="text">
             </div>
             <div>
-                <button type="submit" class="btn btn-danger pd-5 tamanho" (click)='EditarVehicle()'>Editar Carro</button>
+                <button type="submit" class="btn btn-warning pd-5 tamanho" (click)='EditarVehicle()'>Editar Carro</button>
             </div>
             
             <h2 class="text-center">Rotativo</h2>
@@ -47,9 +47,13 @@
                     class="form-control" placeholder="{{RotativeByID.saida}}">
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-danger pd-5" (click)='EditarRotative()'>Editar rotativo</button>
+                <button type="submit" class="btn btn-warning pd-5" (click)='EditarRotative()'>Editar rotativo</button>
                 <button routerLink="/lista" class="btn btn-primary">Listar todos</button>
             </div>
         </form>
     </div>
+    <div class="d-flex justify-content-center"> 
+        <button type="submit" class="btn btn-danger pd-5" (click)='excluirRegistro()'>Excluir este registro</button>
+    </div>
+    
 </div>

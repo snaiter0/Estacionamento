@@ -49,7 +49,7 @@
                 <tr *ngFor='let rotative of listarRotatives' class="altura">
                     <td >{{rotative.entrada}}</td>
                     <td>{{rotative.saida}}</td>
-                    <td class="static"> <button class="btn btn-secondary" [routerLink]= "['/saida', rotative.id]">Encerrar</button> <button [routerLink]= "['/editar', rotative.id]" class="btn btn-primary">Editar</button></td>
+                    <td> <button class="btn btn-secondary pd-5" [routerLink]= "['/saida', rotative.id]">Encerrar</button> <button [routerLink]= "['/editar', rotative.id]" class="btn btn-primary">Edit/Del</button></td>
                     
             </tr>
             </tbody>

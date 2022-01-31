@@ -14,6 +14,14 @@ export class ServicosService {
     private http: HttpClient
   ) { }
 
+  newVehicle(vehicleModel:VehicleModel): Observable<VehicleModel>{
+    return this.http.post<VehicleModel>("http://localhost:8080/VehicleController/Save", vehicleModel)
+  }
+
+  newRotative(rotative:Rotative) : Observable<Rotative>{
+    return this.http.post<Rotative>("http://localhost:8080/Rotative/Save", rotative)
+  }
+
     newClient(clientModel: ClientModel):Observable<ClientModel>{
     return this.http.post<ClientModel>("http://localhost:8080/Client/Save", clientModel)
     }
@@ -41,14 +49,6 @@ export class ServicosService {
     getRotativeByID(id: number) : Observable<Rotative>{
       return this.http.get<Rotative>(`http://localhost:8080/Rotative/FindRotativeByID/${id}`)
     }
-    
-    newVehicle(vehicleModel:VehicleModel): Observable<VehicleModel>{
-      return this.http.post<VehicleModel>("http://localhost:8080/VehicleController/Save", vehicleModel)
-    }
-
-    newRotative(rotative:Rotative) : Observable<Rotative>{
-      return this.http.post<Rotative>("http://localhost:8080/Rotative/Save", rotative)
-    }
 
     listAllClients(): Observable<ClientModel[]>{
       return this.http.get<ClientModel[]>("http://localhost:8080/Client/ListAllClients")
@@ -62,5 +62,15 @@ export class ServicosService {
       return this.http.get<Rotative[]>("http://localhost:8080/Rotative/FindAllRotatives")
     }
 
+    deleteClient(id:number): Observable<ClientModel>{
+      return this.http.delete<ClientModel>(`http://localhost:8080/Client/Delete/${id}`)
+    }
 
+    deleteVehicle(id:number): Observable<VehicleModel>{
+      return this.http.delete<VehicleModel>(`http://localhost:8080/VehicleController/Delete/${id}`)
+    }
+
+    deleteRotative(id:number): Observable<Rotative>{
+      return this.http.delete<Rotative>(`http://localhost:8080/Rotative/Delete/${id}`)
+    }
 }
